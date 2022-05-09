@@ -23,7 +23,7 @@ def obtenerMensaje(): #funcion que pide mensaje al usuario
         
         nombre_archivo = input("ingrese el nombre del archivo de texto: ").lower()
         
-        ruta = r"C:\Users\Casa\Desktop\Python\manejo de archivos\Mensajes encriptados" 
+        ruta = input("Escribe la ruta de acceso a la carpeta donde quieres guardar o cargar los mensajes. ")
         
         
         try:
@@ -95,7 +95,7 @@ def guardar_mensaje_encriptado(): #funcion que crea el archivo tecto y lo guarda
     
     if guardar:
         nombre_archivo = input("ingrese el nombre del archivo: ").lower()
-        ruta = r"C:\Users\Casa\Desktop\Python\manejo de archivos\Mensajes encriptados"
+        ruta = input("Escribe la ruta de acceso a la carpeta donde quieres guardar o cargar los mensajes. ")
         archivo = open( ruta + BARRA_INCLINADA + nombre_archivo+".txt", "w")
         archivo.write(mensaje_encriptado)
         archivo.close()
@@ -140,7 +140,7 @@ while centinela:
 
     if realizar_de_nuevo():
         centinela = True
-    #else:
+    else:
         dudas = input("si funciono como esperaba: (si o no): ").lower().startswith("s")
         
         if dudas:
